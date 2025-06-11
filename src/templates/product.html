@@ -1,0 +1,35 @@
+{% extends "src/templates/global/layout.html" %}
+{% set productList = [
+{
+img: "foo",
+title: "",
+sub: "",
+tad: ['']
+}
+]%}
+
+
+{% block content %}
+<main class="main-page">
+    <!-- intro -->
+    {{productTitle}}
+    {{productProjects}}
+    {{productSub}}
+
+    <!-- images -->
+    {{productImage}}
+
+    <!-- others -->
+    <ul>
+        {% for item in productList %}
+        <li class="nav-item">
+            <a class="nav-link" href="javascript:;">{{item.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}
+
+{% block page_js %}
+<script type="module" src="/src/"></script>
+{% endblock %}
