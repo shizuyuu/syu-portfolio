@@ -1,16 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-
-
-
 @theme {
-    --font-roboto: "Roboto", sans-serif; 
-    --font-abhaya: "Abhaya Libre", sans-serif; 
-    --color-base: #5F27AC;
+    --font-roboto: "Roboto", sans-serif;
+    --font-abhaya: "Abhaya Libre", sans-serif;
+    --color-primary: #5F27AC;
     --color-dark: #1C1C1C;
     --color-decorative: #FBF9FF;
     --color-hashtag-1: #F8F5FF;
     --color-hashtag-2: #8C5AAE;
     --color-pop-up-bg: #D1D1D1;
+}
+
+@layer utilities {
+    .container {
+        width: 100%;
+        max-width: 1366px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @media screen and (min-width: 768px) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}
+
+/* custom css */
+.text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+
+    div {
+        white-space: nowrap;
+        padding: 0 10rem;
+        animation: move-rtl 20000ms linear infinite;
+    }
+}
+
+@keyframes move-rtl {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
