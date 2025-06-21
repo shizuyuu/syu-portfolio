@@ -17,7 +17,8 @@
 		</div>
 	</section>
 	<!-- about -->
-	<section class="about-section relative w-full bg-white flex flex-col justify-items-center items-center">
+	<section
+		class="about-section relative w-full bg-white flex flex-col justify-items-center items-center overflow-hidden">
 		<div class="text-wrapper absolute top-40 z-0 select-none w-full">
 			<div class="bg-text font-roboto font-semibold text-[180px] text-decorative">As a goldfish in this world,
 				each time I open my eyes, I see a brand new day full of wonder.</div>
@@ -38,24 +39,47 @@
 			</div>
 		</div>
 		<div class="bg-wrapper z-10 select-none mb-14">
-			<div class="bg-img h-[80px]">
+			<div class="bg-img h-[60px] lg:h-[80px]">
 				<img class="h-full object-cover" src="/src/images/home-s2-2-poster.png" alt="poster" loading="lazy">
 			</div>
-			<div class="bg-img h-[80px]">
+			<div class="bg-img h-[60px] lg:h-[80px]">
 				<img class="h-full object-cover" src="/src/images/home-s2-2-poster.png" alt="poster" loading="lazy">
 			</div>
+			<div class="bg-img h-[60px] lg:h-[80px]">
+				<img class="h-full object-cover" src="/src/images/home-s2-2-poster.png" alt="poster" loading="lazy">
+			</div>
+		</div>
 	</section>
 	<!-- Experience -->
-	<section class="experience-section relative w-full bg-white flex flex-col justify-items-center items-center">
-		<div class="container">
+	<section class="experience-section relative w-full bg-linear-to-r from-[#F8F5FF] to-[#FBE6F3] overflow-hidden">
+		<img class="absolute top-[30px] lg:top-[55px] right-[-7%] lg:right-[-2%] w-[265px] lg:w-[345px] select-none"
+			src="/src/images/home-s3-bg.svg" alt="bg-svg" loading="lazy">
+		<div class="container py-23">
+			<div class="text-left mb-8">
+				<img src="src/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mb-8" loading="lazy">
+				<h2 class="font-abhaya text-4xl lg:text-[50px]">Experience</h2>
+			</div>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[30px] gap-y-[60px]">
+				<div class="col">
+					<div class="font-abhaya text-3xl lg:text-[40px]">2021.04-2024.04</div>
+				</div>
+				<div class="col">
+					<div class="font-abhaya text-3xl lg:text-[40px]">2015.08-2020.11</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Works Collection -->
+	<section class="works-section relative w-full bg-white">
+		<div class="container py-23">
 			<div class="text-center">
-
+				<img src="src/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mx-auto mb-8" loading="lazy">
+				<h2 class="font-abhaya text-4xl lg:text-[50px]">Works Collection</h2>
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[60px]">
 			</div>
-
 		</div>
-		<!-- Work Collection -->
+	</section>
 </main>
 {% endblock %}
 
