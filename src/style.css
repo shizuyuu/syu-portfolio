@@ -34,9 +34,20 @@
     justify-content: flex-start;
     overflow: hidden;
 
-    div {
+    .bg-text {
         white-space: nowrap;
         padding: 0 10rem;
+        animation: move-rtl 25000ms linear infinite;
+    }
+}
+
+.bg-wrapper {
+    display: flex;
+    overflow: hidden;
+
+    .bg-img {
+        flex-basis: 2380px;
+        flex-shrink: 0;
         animation: move-rtl 20000ms linear infinite;
     }
 }
