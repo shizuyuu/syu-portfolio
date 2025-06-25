@@ -1,7 +1,7 @@
 function handleStaggeredScroll() {
-  const leftCol = document.querySelector(".works-section .column.left");
-  const rightCol = document.querySelector(".works-section .column.right");
-  const worksSection = document.querySelector(".works-section");
+  const leftCol = document.querySelector("#works-section .column.left");
+  const rightCol = document.querySelector("#works-section .column.right");
+  const worksSection = document.querySelector("#works-section");
   if (!leftCol || !rightCol || !worksSection) return;
 
   // 取得 section 的位置

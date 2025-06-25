@@ -3,8 +3,13 @@
 {% block content %}
 <main class="main-page">
 	<!-- KV -->
-	<section
-		class="kv-section static w-full h-[100vh]  bg-gradient-to-r from-[#F8F5FF] to-primary flex justify-items-center items-center">
+	<section id="kv-section" class="static w-full h-[100vh]  flex justify-items-center items-center">
+		<div class="background-video">
+			<video autoplay muted loop playsinline class="w-full h-full object-cover">
+				<source src="/src/videos/home-topbanner.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
 		<div class="container">
 			<div class="text-center">
 				<img src="src/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mt-23 mx-auto mb-8" loading="lazy">
@@ -17,8 +22,7 @@
 		</div>
 	</section>
 	<!-- about -->
-	<section
-		class="about-section relative w-full bg-white flex flex-col justify-items-center items-center overflow-hidden">
+	<section id="about-section" class="relative w-full bg-white flex flex-col justify-items-center items-center">
 		<div class="text-wrapper absolute top-40 z-0 select-none w-full">
 			<div class="bg-text font-roboto font-semibold text-[180px] text-decorative">As a goldfish in this world,
 				each time I open my eyes, I see a brand new day full of wonder.</div>
@@ -51,8 +55,8 @@
 		</div>
 	</section>
 	<!-- Experience -->
-	<section class="experience-section relative w-full bg-linear-to-r from-[#F8F5FF] to-[#FBE6F3] overflow-hidden">
-		<img class="absolute top-[30px] lg:top-[55px] right-[-7%] lg:right-[-2%] w-[265px] lg:w-[345px] select-none"
+	<section id="experience-section" class="relative w-full bg-linear-to-r from-[#F8F5FF] to-[#FBE6F3]">
+		<img class="absolute top-[30px] lg:top-[55px] right-[-7%] lg:right-[-2%] w-[265px] lg:w-[345px] select-none pointer-events-none"
 			src="/src/images/home-s3-bg.svg" alt="bg-svg" loading="lazy">
 		<div class="container py-23">
 			<div class="text-left mb-8">
@@ -129,7 +133,7 @@
 		</div>
 	</section>
 	<!-- Works Collection -->
-	<section class="works-section relative w-full bg-white">
+	<section id="works-section" class="relative w-full bg-white">
 		<div class="container py-15 lg:py-23">
 			<div class="text-center">
 				<img src="src/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mx-auto mb-8" loading="lazy">

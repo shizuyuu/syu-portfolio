@@ -1,17 +1,18 @@
-<header class="absolute top-0 left-0 w-full z-50 shadow-md">
-    <nav class="flex items-center justify-between px-6 py-7">
+<header class="fixed top-0 left-0 w-full z-50 ">
+    <nav class="flex items-center justify-between p-3.75 lg:px-6 lg:py-7">
         <div class="flex items-center space-x-4">
             <a href="/" class="font-abhaya text-3xl lg:text-[40px]">
                 Alani Syu
             </a>
             <span class="site-title px-4 border-l-1 border-dark-500">PORTFOLIO</span>
         </div>
+        <!-- PC -->
         <ul class="items-center space-x-12 hidden lg:flex">
-            <li><a href="/" class="transition duration-200 ease-in hover:text-primary">HOME</a></li>
-            <li><a href="/about" class="transition duration-200 ease-in hover:text-primary">ABOUT ME</a></li>
-            <li><a href="/contact" class="transition duration-200 ease-in hover:text-primary">EXPERIENCE</a>
+            <li><a href="#kv-section" class="transition duration-200 ease-in hover:text-primary">HOME</a></li>
+            <li><a href="#about-section" class="transition duration-200 ease-in hover:text-primary">ABOUT ME</a></li>
+            <li><a href="#experience-section" class="transition duration-200 ease-in hover:text-primary">EXPERIENCE</a>
             </li>
-            <li><a href="/blog" class="transition duration-200 ease-in hover:text-primary">WORKS COLLECTION</a>
+            <li><a href="#works-section" class="transition duration-200 ease-in hover:text-primary">WORKS COLLECTION</a>
             </li>
             <li>
                 <a href="mailto:syu3n1118@gmail.com" target="_blank"
@@ -20,5 +21,50 @@
                 </a>
             </li>
         </ul>
+        <!-- Mobile -->
+        <button id="menu-btn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10"
+            aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.5" d="M4 5h16M4 12h16M4 19h16" color="currentColor" />
+            </svg>
+        </button>
     </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-pop-up-bg/50 z-50"></div>
+    <aside id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-[64vw] max-w-[340px] bg-white z-50 shadow-lg translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex justify-end p-6">
+            <button id="close-menu-btn" class="w-8 h-8 flex items-center justify-center" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5" d="M19 5L5 19M5 5l14 14" color="currentColor" />
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-col">
+            <li class="py-7.5 border-b-1 border-dark/10"><a href="#kv-section"
+                    class="font-abhaya lg:font-roboto text-[26px] lg:text-base px-5">Home</a></li>
+            <li class="py-7.5 border-b-1 border-dark/10"><a href="#about-section"
+                    class="font-abhaya lg:font-roboto text-[26px] lg:text-base px-5">About Me</a></li>
+            <li class="py-7.5 border-b-1 border-dark/10"><a href="#experience-section"
+                    class="font-abhaya lg:font-roboto text-[26px] lg:text-base px-5">Experience</a></li>
+            <li class="py-7.5 border-b-1 border-dark/10"><a href="#works-section"
+                    class="font-abhaya lg:font-roboto text-[26px] lg:text-base px-5">Works Collection</a></li>
+            <li class="py-7.5 flex justify-between items-center  px-5">
+                <a href="mailto:syu3n1118@gmail.com" target="_blank"
+                    class="font-abhaya lg:font-roboto text-[26px] lg:text-base">
+                    Send Email
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5" color="currentColor">
+                        <path d="m7 8.5l2.942 1.74c1.715 1.014 2.4 1.014 4.116 0L17 8.5" />
+                        <path
+                            d="M2.016 13.476c.065 3.065.098 4.598 1.229 5.733c1.131 1.136 2.705 1.175 5.854 1.254c1.94.05 3.862.05 5.802 0c3.149-.079 4.723-.118 5.854-1.254c1.131-1.135 1.164-2.668 1.23-5.733c.02-.986.02-1.966 0-2.952c-.066-3.065-.099-4.598-1.23-5.733c-1.131-1.136-2.705-1.175-5.854-1.254a115 115 0 0 0-5.802 0c-3.149.079-4.723.118-5.854 1.254c-1.131 1.135-1.164 2.668-1.23 5.733a69 69 0 0 0 0 2.952" />
+                    </g>
+                </svg>
+            </li>
+        </ul>
+    </aside>
 </header>
