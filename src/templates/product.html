@@ -1,21 +1,11 @@
 {% extends "src/templates/global/layout.html" %}
-<!-- other list -->
-{% set productList = [
-{
-img: "foo",
-title: "",
-sub: "",
-tad: ['']
-}
-]%}
-
 
 {% block content %}
 <main class="main-page">
     <!-- intro -->
     <section class="w-full bg-white py-13">
         <div class="container">
-            <img src="src/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mt-23 mb-8" loading="lazy">
+            <img src="./static/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mt-23 mb-8" loading="lazy">
             <h1 class="font-abhaya text-4xl lg:text-6xl">{{productTitle}}</h1>
             <div class="flex items-center mt-2.5">
                 <p class="flex-none font-abhaya text-2xl lg:text-[26px] mr-5">Projects</p>
@@ -36,9 +26,9 @@ tad: ['']
     <section>
         {% for item in productImgs %}
         <picture>
-            <source srcset="src/images/products/{{item.mobile}}" media="(max-width: 767px)">
-            <img src="src/images/products/{{item.desktop}}" alt="{{productProjects}}" class="w-full h-auto object-cover"
-                loading="lazy">
+            <source srcset="./static/images/products/{{item.mobile}}" media="(max-width: 767px)">
+            <img src="./static/images/products/{{item.desktop}}" alt="{{productProjects}}"
+                class="w-full h-auto object-cover" loading="lazy">
         </picture>
         {% endfor %}
     </section>
@@ -92,16 +82,9 @@ tad: ['']
             </div>
         </div>
     </section>
-    <ul>
-        {% for item in productList %}
-        <li class="nav-item">
-            <a class="nav-link" href="javascript:;">{{item.title}}</a>
-        </li>
-        {% endfor %}
-    </ul>
 </main>
 {% endblock %}
 
 {% block page_js %}
-<script type="module" src="/src/"></script>
+<script type="module" src="./static/js/index.js"></script>
 {% endblock %}
