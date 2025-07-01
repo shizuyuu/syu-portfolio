@@ -1,13 +1,7 @@
 import { defineConfig } from "vite";
-// import { fileURLToPath } from "node:url";
-// import path from "node:path";
-
 import tailwindcss from "@tailwindcss/vite";
 // @ts-ignore
 import nunjucks from "vite-plugin-nunjucks";
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
 
 export default {
   root: "src/",
@@ -37,6 +31,7 @@ export default {
     },
   },
   plugins: [
+    tailwindcss(),
     nunjucks({
       variables: {
         "index.html": {
@@ -44,14 +39,14 @@ export default {
           description:
             "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "index.html",
-          image: "images/og-image.jpg",
+          image: "./static/images/og-image.jpg",
         },
         "product-1.html": {
           title: "Perfectcorp.com & DemoStore｜Alani Syu Portfolio",
           description:
             "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-1.html",
-          image: "images/og-image.jpg",
+          image: "./static/images/p01-banner.jpg",
           productTitle: "Perfectcorp.com & DemoStore",
           productProjects: "玩美移動 — AI/AR 美妝科技",
           productSub:
@@ -93,7 +88,7 @@ export default {
           description:
             "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-2.html",
-          image: "images/og-image.jpg",
+          image: "./static/images/p02-banner.jpg",
           productTitle: "YouCam Online Editor",
           productProjects: "玩美移動 — AI/AR 美妝科技",
           productSub:
@@ -141,7 +136,7 @@ export default {
           description:
             "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-3.html",
-          image: "images/og-image.jpg",
+          image: "./static/images/p03-banner.jpg",
           productTitle: "NFTs Product Showcase",
           productProjects: "玩美移動 — AI/AR 美妝科技",
           productSub:
@@ -172,6 +167,5 @@ export default {
         },
       },
     }),
-    tailwindcss(),
   ],
 };
