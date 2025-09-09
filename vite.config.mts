@@ -22,6 +22,9 @@ export default {
         product1: "src/product-1.html",
         product2: "src/product-2.html",
         product3: "src/product-3.html",
+        product4: "src/product-4.html",
+        product5: "src/product-5.html",
+        product6: "src/product-6.html",
       },
       output: {
         entryFileNames: "assets/[name].js",
@@ -167,7 +170,7 @@ export default {
           },
         },
         "product-4.html": {
-          title: "China Airlines Cargo Services",
+          title: "China Airlines Cargo Services｜Alani Syu Portfolio",
           description:
             "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-4.html",
@@ -203,7 +206,7 @@ export default {
           },
         },
         "product-5.html": {
-          title: "Qwalker",
+          title: "Qwalker｜Alani Syu Portfolio",
           description:
             "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-5.html",
@@ -239,7 +242,7 @@ export default {
           },
         },
         "product-6.html": {
-          title: "Cathay United bank ATM @ Family Mart",
+          title: "Cathay United bank ATM @ Family Mart｜Alani Syu Portfolio",
           description:
             "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-6.html",
@@ -256,7 +259,7 @@ export default {
             { mobile: "mb-p6-content-4.jpg", desktop: "dt-p6-content-4.jpg" },
             { mobile: "mb-p6-content-5.jpg", desktop: "dt-p6-content-5.jpg" },
             { mobile: "mb-p6-content-6.jpg", desktop: "dt-p6-content-6.jpg" },
-            { mobile: "mb-p6-content-7.jpg", desktop: "default.jpg" },
+            { mobile: "default.jpg", desktop: "dt-p6-content-7.jpg" },
           ],
           otherLeft: {
             title: "Qwalker",
