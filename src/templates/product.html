@@ -42,10 +42,11 @@
             <div class="staggered-scroll grid grid-cols-1 lg:grid-cols-2 gap-x-[40px] lg:mt-7.5 lg:mb-22.5">
                 <!-- 左欄內容 -->
                 <div class="column left overflow-visible translate-y-10">
-                    <div class="card mb-13">
+                    <div class="card group mb-13">
                         <a href="{{otherLeft.url}}" rel="noopener noreferrer">
-                            <div class="card-img rounded-2xl overflow-hidden mb-4">
-                                <img src="{{otherLeft.imgs}}" alt="s4-1" loading="lazy">
+                            <div class="relative overflow-hidden block card-img rounded-2xl mb-4">
+                                <img src="{{otherLeft.imgs}}" alt="{{otherLeft.title}}" loading="lazy" class="w-full h-auto block transition-transform duration-400 group-hover:scale-110 group-focus:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"></div>
                             </div>
                             <div class="card-content">
                                 <h4 class="font-abhaya text-2xl lg:text-[26px]">{{otherLeft.title}}</h4>
@@ -63,10 +64,11 @@
                 </div>
                 <!-- 右欄內容 -->
                 <div class="column right overflow-visible translate-y-4">
-                    <div class="card mb-13">
+                    <div class="card group mb-13">
                         <a href="{{otherRight.url}}" rel="noopener noreferrer">
-                            <div class="card-img rounded-2xl overflow-hidden mb-4">
-                                <img src="{{otherRight.imgs}}" alt="s4-1" loading="lazy">
+                            <div class="relative overflow-hidden block card-img rounded-2xl mb-4">
+                                <img src="{{otherRight.imgs}}" alt="{{otherRight.title}}" loading="lazy" class="w-full h-auto block transition-transform duration-400 group-hover:scale-110 group-focus:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"></div>
                             </div>
                             <div class="card-content">
                                 <h4 class="font-abhaya text-2xl lg:text-[26px]">{{otherRight.title}}</h4>
