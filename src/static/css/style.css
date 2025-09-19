@@ -146,3 +146,13 @@ section {
         transform: translateX(-100%);
     }
 }
+
+/* product images blur */
+.img-blur {
+    filter: blur(16px);
+    transition: filter 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+
+    &.loaded {
+        filter: blur(0);
+    }
+}

@@ -28,7 +28,10 @@
         <picture>
             <source srcset="./static/images/products/{{item.mobile}}" media="(max-width: 767px)">
             <img src="./static/images/products/{{item.desktop}}" alt="{{productProjects}}"
-                class="w-full h-auto object-cover" loading="lazy">
+                class="w-full h-auto object-cover img-blur" 
+                loading="lazy"
+                onload="this.classList.add('loaded')"
+            >
         </picture>
         {% endfor %}
     </section>
