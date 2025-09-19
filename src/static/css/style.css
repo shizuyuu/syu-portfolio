@@ -150,9 +150,43 @@ section {
 /* product images blur */
 .img-blur {
     filter: blur(16px);
-    transition: filter 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+    transition: filter 0.8s cubic-bezier(.68, -0.55, .27, 1.55);
 
     &.loaded {
         filter: blur(0);
+    }
+}
+
+/* loading overlay */
+#loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+}
+#loading-overlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.spinner-cube {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(to right in oklab, rgb(228, 183, 232) 0%, rgb(166, 194, 253) 100%);
+    animation: cube-spin 1s infinite linear;
+}
+
+@keyframes cube-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }

@@ -2,17 +2,21 @@
 
 {% block content %}
 <main class="main-page">
+	<!-- loading overlay -->
+	<div id="loading-overlay">
+		<div class="spinner-cube"></div>
+	</div>
 	<!-- KV -->
 	<section id="kv-section" class="static w-full h-[100vh]  flex justify-items-center items-center">
 		<div class="background-video">
 			<div class="absolute w-full h-full bg-[#EFECF733]/20 z-1"></div>
-			<video autoplay muted loop playsinline class="w-full h-full object-cover">
+			<video autoplay muted loop playsinline id="main-video" class="w-full h-full object-cover">
 				<source src="./static/videos/home-topbanner.mp4" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
 		</div>
 		<div class="container">
-			<div class="text-center">
+			<div class="text-center" data-aos="fade-in">
 				<img src="./static/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mt-4 lg:mt-23 mx-auto mb-8"
 					loading="lazy">
 				<h1 class="font-abhaya text-4xl lg:text-6xl mb-5 lg:leading-18">Even if I am a little cog,<br>
@@ -22,7 +26,7 @@
 					Painting; Other; }</p>
 			</div>
 		</div>
-		<div class="absolute bottom-12 lg:bottom-15 left-0 right-0 text-center">
+		<div class="absolute bottom-12 lg:bottom-15 left-0 right-0 text-center" data-aos="fade-in" data-aos-delay="200">
 			<a href="index.html#about-section">
 				<img src="./static/images/icon-down.svg" alt="icon-down" class="icon-down w-[54px] mx-auto mb-8"
 					loading="lazy">
@@ -45,14 +49,14 @@
 				<div class="w-[113px] h-[113px] rounded-full overflow-hidden mx-auto mb-4">
 					<img src="./static/images/home-s2-1-avatar.jpg" alt="avatar" loading="lazy">
 				</div>
-				<h2 class="font-abhaya text-4xl lg:text-[50px] mb-5">I'm Alani Syu.</h2>
-				<p class="font-roboto font-semibold text-xl lg:text-[22px] mb-8">即使是個小螺絲，也要把世界變美</p>
-				<p class="font-roboto text-sm lg:text-base max-w-[785px] mx-auto mb-14">作為 Web UI Designer，懂
+				<h2 class="font-abhaya text-4xl lg:text-[50px] mb-5" data-aos="fade-in">I'm Alani Syu.</h2>
+				<p class="font-roboto font-semibold text-xl lg:text-[22px] mb-8" data-aos="fade-in">即使是個小螺絲，也要把世界變美</p>
+				<p class="font-roboto text-sm lg:text-base max-w-[785px] mx-auto mb-14" data-aos="fade-in">作為 Web UI Designer，懂
 					Code，能與前端溝通；懂時程控管，能與 PM
 					協調時間；懂市場分析，制定視覺方向，能提高提案命中率。曾為公司爭取到多個大型專案，讓我們一起打造精彩的產品吧！</p>
 			</div>
 		</div>
-		<div class="bg-wrapper z-10 select-none mb-14">
+		<div class="bg-wrapper z-10 select-none mb-14" data-aos="fade-in">
 			<div class="bg-img h-[60px] lg:h-[80px]">
 				<img class="h-full object-cover" src="./static/images/home-s2-2-poster.png" alt="poster" loading="lazy">
 			</div>
@@ -74,7 +78,7 @@
 				<h2 class="font-abhaya text-4xl lg:text-[50px]">Experience</h2>
 			</div>
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[30px] gap-y-[60px]">
-				<div class="col">
+				<div class="col" data-aos="fade-left" data-aos-duration="500">
 					<div class="flex items-center">
 						<div class="flex-none font-abhaya text-3xl lg:text-[40px] pr-7">2021.04-2024.04</div>
 						<div class="flex-initial w-full h-[1px] bg-dark hidden lg:inline"></div>
@@ -108,7 +112,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col" data-aos="fade-right" data-aos-duration="500">
 					<div class="font-abhaya text-3xl lg:text-[40px]">2015.08-2020.11</div>
 					<div class="flex items-center mt-5 lg:mt-7.5">
 						<div class="w-[70px] h-[70px] rounded-full overflow-hidden mr-2.5">

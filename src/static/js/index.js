@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function handleStaggeredScroll() {
   const leftCol = document.querySelector("#works-section .column.left");
   const rightCol = document.querySelector("#works-section .column.right");
@@ -37,3 +40,27 @@ function handleStaggeredScroll() {
 window.addEventListener("scroll", handleStaggeredScroll);
 window.addEventListener("resize", handleStaggeredScroll);
 document.addEventListener("DOMContentLoaded", handleStaggeredScroll);
+
+// 影片載入動畫
+const video = document.getElementById('main-video');
+const loading = document.getElementById('loading-overlay');
+
+if(video){
+  video.addEventListener('canplaythrough', () => {
+    loading.classList.add('hide');
+    // 等 loading 動畫結束再初始化 AOS
+    setTimeout(() => {
+      AOS.init({
+          duration: 1000,
+          offset: 100,
+      });
+    }, 1000);
+  });
+}else{
+  window.addEventListener('load', () => {
+    AOS.init({
+        duration: 1000,
+        offset: 100,
+    });
+});
+}
