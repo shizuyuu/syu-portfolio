@@ -45,22 +45,30 @@ document.addEventListener("DOMContentLoaded", handleStaggeredScroll);
 const video = document.getElementById('main-video');
 const loading = document.getElementById('loading-overlay');
 
-if(video){
+if(video && sessionStorage.getItem('indexLoaded') !== '1'){
   video.addEventListener('canplaythrough', () => {
     loading.classList.add('hide');
+    sessionStorage.setItem('indexLoaded', '1');
     // 等 loading 動畫結束再初始化 AOS
     setTimeout(() => {
-      AOS.init({
-          duration: 1000,
-          offset: 100,
-      });
+      loadAOS();
     }, 1000);
   });
-}else{
+}else if(loading){
+  loading.style.display = 'none';
   window.addEventListener('load', () => {
-    AOS.init({
-        duration: 1000,
-        offset: 100,
-    });
-});
+    loadAOS();
+  });
+}else{
+  // production 直接載入 AOS
+  window.addEventListener('load', () => {
+    loadAOS();
+  });
+}
+// AOS 初始化
+function loadAOS() {
+AOS.init({
+      duration: 1000,
+      offset: 100,
+  });
 }
