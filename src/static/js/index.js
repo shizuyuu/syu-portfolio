@@ -44,22 +44,31 @@ document.addEventListener("DOMContentLoaded", handleStaggeredScroll);
 // 影片載入動畫
 const video = document.getElementById('main-video');
 const loading = document.getElementById('loading-overlay');
+const path = window.location.pathname || '';
+const isEnIndex = path === '/en/' || path === '/en/index.html' || path.startsWith('/en/index');
 
-if(video && sessionStorage.getItem('indexLoaded') !== '1'){
+// 如果是在 /en 的首頁，直接隱藏 loading 並初始化 AOS（避免相對路徑 /en/ 導致 overlay 一直顯示）
+if (isEnIndex && loading) {
+  loading.style.display = 'none';
+  sessionStorage.setItem('indexLoaded', '1');
+  window.addEventListener('load', () => {
+    loadAOS();
+  });
+} else if (video && sessionStorage.getItem('indexLoaded') !== '1') {
   video.addEventListener('canplaythrough', () => {
-    loading.classList.add('hide');
+    if (loading) loading.classList.add('hide');
     sessionStorage.setItem('indexLoaded', '1');
     // 等 loading 動畫結束再初始化 AOS
     setTimeout(() => {
       loadAOS();
     }, 1000);
   });
-}else if(loading){
+} else if (loading) {
   loading.style.display = 'none';
   window.addEventListener('load', () => {
     loadAOS();
   });
-}else{
+} else {
   // production 直接載入 AOS
   window.addEventListener('load', () => {
     loadAOS();

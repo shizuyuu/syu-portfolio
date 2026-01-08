@@ -1,4 +1,5 @@
 {% extends "src/templates/global/layout.html" %}
+{% set lang = "en" %}
 
 {% block content %}
 <main class="main-page">
@@ -50,10 +51,8 @@
 					<img src="/static/images/home-s2-1-avatar.jpg" alt="avatar" loading="lazy">
 				</div>
 				<h2 class="font-abhaya text-4xl lg:text-[50px] mb-5" data-aos="fade-in">I'm Alani Syu.</h2>
-				<p class="font-roboto font-semibold text-xl lg:text-[22px] mb-8" data-aos="fade-in">即使是個小螺絲，也要把世界變美</p>
-				<p class="font-roboto text-sm lg:text-base max-w-[785px] mx-auto mb-14" data-aos="fade-in">作為 Web UI Designer，懂
-					Code，能與前端溝通；懂時程控管，能與 PM
-					協調時間；懂市場分析，制定視覺方向，能提高提案命中率。曾為公司爭取到多個大型專案，讓我們一起打造精彩的產品吧！</p>
+				<p class="font-roboto font-semibold text-xl lg:text-[22px] mb-8" data-aos="fade-in">{{ about_subtitle | default('Even if I am a small cog, I still want to make the world beautiful.') }}</p>
+				<p class="font-roboto text-sm lg:text-base max-w-[785px] mx-auto mb-14" data-aos="fade-in">{{ about_text | default('As a Web UI Designer, I write code to collaborate with developers, manage timelines with PMs, and use market analysis to set visual directions that improve proposal success rates. I have contributed to many major projects — let\'s build great products together.') }}</p>
 			</div>
 		</div>
 		<div class="bg-wrapper z-10 select-none mb-14" data-aos="fade-in">
@@ -85,7 +84,7 @@
 					</div>
 					<div class="flex items-center mt-5 lg:mt-7.5">
 						<div class="w-[70px] h-[70px] rounded-full overflow-hidden mr-2.5">
-							<img src="/static/images/home-s3-1-poster.png" alt="s3-1" loading="lazy">
+						<img src="/static/images/home-s3-1-poster.png" alt="s3-1" loading="lazy">
 						</div>
 						<div class="grid gap-1.5">
 							<div class="font-roboto font-semibold text-xl lg:text-[22px]">玩美移動 — AI/AR 美妝科技</div>
@@ -112,41 +111,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col" data-aos="fade-right" data-aos-duration="500">
-					<div class="font-abhaya text-3xl lg:text-[40px]">2015.08-2020.11</div>
-					<div class="flex items-center mt-5 lg:mt-7.5">
-						<div class="w-[70px] h-[70px] rounded-full overflow-hidden mr-2.5">
-							<img src="/static/images/home-s3-2-poster.png" alt="s3-1" loading="lazy">
-						</div>
-						<div class="grid gap-1.5">
-							<div class="font-roboto font-semibold text-xl lg:text-[22px]">好事互動媒體設計</div>
-							<p class="font-roboto text-sm lg:text-base">UI Designer • 5 years</p>
-						</div>
-					</div>
-					<div class="lg:max-w-[482px] mt-5 lg:mt-7.5">
-						<p class="font-roboto text-sm lg:text-base">專精 Web UI 設計，執行超過 196+
-							專案，涵蓋企業官網、行銷頁面、電商平台及內部系統。主導多項重點專案，包括國泰人壽官網行動版、國泰人壽 VIP 形象網站、台灣大哥大官網、TOYOTA 官網、台灣 Pay
-							官網、旺旺友聯產險官網及倍舒痕產品形象網站，成功提升品牌形象與用戶體驗。</p>
-						<ul class="mt-5 lg:mt-7.5 flex flex-wrap gap-2.5">
-							<li
-								class="inline-block p-1 px-4 rounded-full bg-hashtag-2/10 font-roboto text-xs lg:text-sm">
-								多樣化 Web UI 設計</li>
-							<li
-								class="inline-block p-1 px-4 rounded-full bg-hashtag-2/10 font-roboto text-xs lg:text-sm">
-								品牌主視覺創作</li>
-							<li
-								class="inline-block p-1 px-4 rounded-full bg-hashtag-2/10 font-roboto text-xs lg:text-sm">
-								團隊協作與專案推進</li>
-							<li
-								class="inline-block p-1 px-4 rounded-full bg-hashtag-2/10 font-roboto text-xs lg:text-sm">
-								跨部門專案協作</li>
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
-	<!-- Works Collection -->
+    <!-- Works Collection -->
 	<section id="works-section" class="relative w-full bg-white">
 		<div class="container py-15 lg:py-23">
 			<div class="text-center">

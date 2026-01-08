@@ -74,14 +74,14 @@ export default {
           otherLeft: {
             title: "YouCam Online Editor",
             sub: "一款基於 AI 技術的線上編輯工具，提供直觀的界面和強大的影像處理功能。用戶可以輕鬆進行照片修飾、創造圖片、更換髮型、擴充底圖、趣味應用等編輯，提升影像品質。",
-            imgs: "./static/images/p02-banner.jpg",
+            imgs: "/static/images/p02-banner.jpg",
             url: "product-2.html",
             list: ["Web RWD Design", "UI Design", "AI Painting", "Component"],
           },
           otherRight: {
             title: "NFTs Product Showcase",
             sub: "為 NFT 設計的產品頁面，專案強調創新的視覺呈現，吸引收藏家與愛好者，並提供直觀的操作體驗，讓使用者輕鬆探索並擁有限量版 NFT，開啟數位藝術的全新世界。",
-            imgs: "./static/images/p03-banner.jpg",
+            imgs: "/static/images/p03-banner.jpg",
             url: "product-3.html",
             list: ["Web RWD Design", "UI Design", "Visual Design"],
           },

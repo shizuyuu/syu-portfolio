@@ -1,27 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh">
+{# 語系變數（優先使用頁面顯式設定 `{% set lang = "en" %}`；若沒有設定，預設為 `zh-TW`） #}
+{% if lang is not defined %}
+    {% set pageUrl = url | default('index.html') %}
+    {% set lang = 'zh-TW' %}
+{% endif %}
+
+{% if lang == 'en' %}
+    {% set basePath = '/en/' %}
+    {% set og_locale = 'en_US' %}
+    {% set is_en = true %}
+    {% set html_lang_attr = 'en' %}
+{% else %}
+    {% set basePath = '/' %}
+    {% set og_locale = 'zh_TW' %}
+    {% set is_en = false %}
+    {% set html_lang_attr = 'zh-TW' %}
+{% endif %}
+
+{% set pageUrl = url | default('index.html') %}
+{% set other_lang_href = (('/en/' ~ pageUrl) if not is_en else ('/' ~ pageUrl)) %}
+
+<html lang="{{ html_lang_attr }}">
 
 <head>
-    <base href="*" />
+    <base href="{{ basePath }}" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="{{description}}" />
     <meta property="og:url" content="{{url}}" />
-    <meta property="og:locale" content="zh" />
+    <meta property="og:locale" content="{{ og_locale }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{title}}" />
     <meta property="og:description" content="{{description}}" />
     <meta property="og:image" content="{{image}}" />
 
-    <link rel="icon" type="image/png" href="./static/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./static/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="./static/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Alani Syu" />
-    <link rel="manifest" href="./static/favicon/site.webmanifest" />
+    {# hreflang / canonical #}
+    <link rel="alternate" hreflang="en" href="{{ '/en/' ~ (url | default('index.html')) }}" />
+    <link rel="alternate" hreflang="zh-TW" href="{{ '/' ~ (url | default('index.html')) }}" />
+    <link rel="canonical" href="{{ basePath ~ (url | default('index.html')) }}" />
 
-    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Alani Syu" />
+    <link rel="manifest" href="/static/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="/static/css/style.css" />
     <title>{{title}}</title>
 </head>
 
@@ -33,7 +59,7 @@
 
         {% block footer %}{% include "src/templates/global/footer.html" %}{% endblock %}
     </div>
-    <script type="module" src="./static/js/main.js"></script>
+    <script type="module" src="/static/js/main.js"></script>
     {% block page_js %}{% endblock %}
 </body>
 
