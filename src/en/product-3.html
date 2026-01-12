@@ -1,2 +1,33 @@
 {% extends "src/templates/product.html" %}
 {% set lang = "en" %}
+{% set url = "product-3.html" %}
+
+{% set productTitle = "NFTs Product Showcase" %}
+{% set productProjects = "Perfectcorp — AI/AR beauty tech" %}
+{% set productSub = "Designed an NFT product page that balances visual appeal with a clear user flow, reducing the learning and usage barrier for digital collectibles." %}
+{% set skillList = ["Web RWD Design","UI Design","Visual Design"] %}
+
+{% set productImgs = [
+  { mobileBase: 'mb-p3-content', desktopBase: 'dt-p3-content', id: 1 },
+  { mobileBase: 'mb-p3-content', desktopBase: 'dt-p3-content', id: 2 },
+  { mobileBase: 'mb-p3-content', desktopBase: 'dt-p3-content', id: 3 },
+  { mobileBase: 'mb-p3-content', desktopBase: 'dt-p3-content', id: 4 },
+  { mobileBase: 'mb-p3-content', desktopBase: 'dt-p3-content', id: 5 },
+  { mobileBase: 'default', desktopBase: 'dt-p3-content', id: 6 }
+] %}
+
+{% set otherLeft = {
+  title: "YouCam Online Editor",
+  sub: "An AI-based online editor with intuitive interface and powerful image processing features.",
+  imgs: "/static/images/p02-banner.jpg",
+  url: "product-2.html",
+  list: ["Web RWD Design","UI Design","AI Painting","Component"]
+} %}
+
+{% set otherRight = {
+  title: "China Airlines Cargo Services",
+  sub: "Redesigned the mobile interface to help staff and customers interact better, reduce order mistakes, and make on-site work faster and more accurate.",
+  imgs: "/static/images/p04-banner.jpg",
+  url: "product-4.html",
+  list: ["Web RWD Design","UI Design","Visual Design"]
+} %}
