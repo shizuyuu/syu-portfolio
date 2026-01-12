@@ -23,11 +23,12 @@
                     SEND EMAIL
                 </a>
             </li>
-            <li><a href="{{ other_lang_href | default('/') }}" id="language-btn" class="transition duration-200 ease-in hover:text-primary">{{ '中' if is_en else 'EN' }}</a>
+            <li>
+                <a href="{{ other_lang_href | default('/') }}" id="language-btn" class=" lg:mr-4 transition duration-200 ease-in hover:text-primary">{{ '中' if is_en else 'EN' }}</a>
             </li>
         </ul>
         <!-- Mobile -->
-        <div class="flex">
+        <div class="flex lg:hidden">
             <a id="language-mobile-btn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10"
                 aria-label="language selection" href="{{ other_lang_href | default('/') }}">{{ '中' if is_en else 'EN' }}</a>
             <button id="menu-btn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10"

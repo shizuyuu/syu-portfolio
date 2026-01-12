@@ -40,14 +40,14 @@ export default {
         "index.html": {
           title: "Alani Syu Portfolio",
           description:
-            "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
+            "I turn requirements into clear, useful designs.設計是起點，串連無限可能.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "index.html",
           image: "./static/images/og-image.jpg",
         },
         "product-1.html": {
           title: "Perfectcorp.com & DemoStore｜Alani Syu Portfolio",
           description:
-            "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
+            "I turn requirements into clear, useful designs.設計是起點，串連無限可能.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-1.html",
           image: "./static/images/p01-banner.jpg",
           productTitle: "Perfectcorp.com & DemoStore",
@@ -92,7 +92,7 @@ export default {
         "product-2.html": {
           title: "YouCam Online Editor｜Alani Syu Portfolio",
           description:
-            "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
+            "I turn requirements into clear, useful designs.設計是起點，串連無限可能.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-2.html",
           image: "./static/images/p02-banner.jpg",
           productTitle: "YouCam Online Editor",
@@ -141,7 +141,7 @@ export default {
         "product-3.html": {
           title: "NFTs Product Showcase｜Alani Syu Portfolio",
           description:
-            "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
+            "I turn requirements into clear, useful designs.設計是起點，串連無限可能.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-3.html",
           image: "./static/images/p03-banner.jpg",
           productTitle: "NFTs Product Showcase",
@@ -175,7 +175,7 @@ export default {
         "product-4.html": {
           title: "China Airlines Cargo Services｜Alani Syu Portfolio",
           description:
-            "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
+            "I turn requirements into clear, useful designs.設計是起點，串連無限可能.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-4.html",
           image: "./static/images/p04-banner.jpg",
           productTitle: "China Airlines Cargo Services",
@@ -211,7 +211,7 @@ export default {
         "product-5.html": {
           title: "Qwalker｜Alani Syu Portfolio",
           description:
-            "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
+            "I turn requirements into clear, useful designs.設計是起點，串連無限可能.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-5.html",
           image: "./static/images/p05-banner.jpg",
           productTitle: "Qwalker",
@@ -247,7 +247,7 @@ export default {
         "product-6.html": {
           title: "Cathay United bank ATM @ Family Mart｜Alani Syu Portfolio",
           description:
-            "Even if I am a little cog,I still want to make the world beautiful.即使是個小螺絲，也要把世界變美。.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
+            "I turn requirements into clear, useful designs.設計是起點，串連無限可能.Alani portfolio { Web RWD Design; APP Design; UI Design; AI Painting; Other; }",
           url: "product-6.html",
           image: "./static/images/p06-banner.jpg",
           productTitle: "Cathay United bank ATM @ Family Mart",
