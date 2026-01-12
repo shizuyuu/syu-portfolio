@@ -5,7 +5,7 @@
     <!-- intro -->
     <section class="w-full bg-white py-13">
         <div class="container" data-aos="fade-in">
-            <img src="./static/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mt-23 mb-8" loading="lazy">
+            <img src="/static/images/home-s1-1.svg" alt="semicolon" class="w-[28px] mt-23 mb-8" loading="lazy">
             <h1 class="font-abhaya text-4xl lg:text-6xl">{{productTitle}}</h1>
             <div class="flex items-center mt-2.5">
                 <p class="flex-none font-abhaya text-2xl lg:text-[26px] mr-5">Projects</p>
@@ -24,10 +24,12 @@
 
     <!-- images -->
     <section>
+        {% set lang_folder = 'en' if is_en else 'zh' %}
+        {% set lang_suffix = 'en' if is_en else 'zh' %}
         {% for item in productImgs %}
         <picture>
-            <source srcset="./static/images/products/{{item.mobile}}" media="(max-width: 767px)">
-            <img src="./static/images/products/{{item.desktop}}" alt="{{productProjects}}"
+            <source srcset="/static/images/products/{{ lang_folder }}/{{ item.mobileBase }}-v2-{{ item.id }}-{{ lang_suffix }}.jpg" media="(max-width: 767px)">
+            <img src="/static/images/products/{{ lang_folder }}/{{ item.desktopBase }}-v2-{{ item.id }}-{{ lang_suffix }}.jpg" alt="{{productProjects}}"
                 class="w-full h-auto object-cover img-blur" 
                 loading="lazy"
                 onload="this.classList.add('loaded')"
@@ -95,5 +97,5 @@
 {% endblock %}
 
 {% block page_js %}
-<script type="module" src="./static/js/index.js"></script>
+<script type="module" src="/static/js/index.js"></script>
 {% endblock %}
