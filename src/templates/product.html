@@ -18,7 +18,7 @@
                 </li>
                 {% endfor %}
             </ul>
-            <p class="mt-2.5 font-roboto text-xs lg:text-sm leading-5">{{productSub}}</p>
+            <p class="mt-4 font-roboto text-sm lg:text-base leading-6 max-w-[483px]">{{productSub}}</p>
         </div>
     </section>
 
@@ -27,8 +27,13 @@
         {% set lang_folder = 'en' if is_en else 'zh' %}
         {% set lang_suffix = 'en' if is_en else 'zh' %}
         {% for item in productImgs %}
+        {% if item.mobileBase == 'default' %}
+            {% set mobileSrc = '/static/images/products/default.jpg' %}
+        {% else %}
+            {% set mobileSrc = '/static/images/products/' ~ lang_folder ~ '/' ~ item.mobileBase ~ '-v2-' ~ item.id ~ '-' ~ lang_suffix ~ '.jpg' %}
+        {% endif %}
         <picture>
-            <source srcset="/static/images/products/{{ lang_folder }}/{{ item.mobileBase }}-v2-{{ item.id }}-{{ lang_suffix }}.jpg" media="(max-width: 767px)">
+            <source srcset="{{ mobileSrc }}" media="(max-width: 767px)">
             <img src="/static/images/products/{{ lang_folder }}/{{ item.desktopBase }}-v2-{{ item.id }}-{{ lang_suffix }}.jpg" alt="{{productProjects}}"
                 class="w-full h-auto object-cover img-blur" 
                 loading="lazy"
