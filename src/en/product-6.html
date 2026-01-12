@@ -1,2 +1,34 @@
 {% extends "src/templates/product.html" %}
 {% set lang = "en" %}
+{% set url = "product-6.html" %}
+
+{% set productTitle = "Cathay United bank ATM @ Family Mart" %}
+{% set productProjects = "gtd interactive CO., LTD." %}
+{% set productSub = "A fun, colorful website with partner brand colors. The design is easy to read and interact with, bringing in more participants." %}
+{% set skillList = ["Web RWD Design","Visual Design"] %}
+
+{% set productImgs = [
+  { mobileBase: 'mb-p6-content', desktopBase: 'dt-p6-content', id: 1 },
+  { mobileBase: 'mb-p6-content', desktopBase: 'dt-p6-content', id: 2 },
+  { mobileBase: 'mb-p6-content', desktopBase: 'dt-p6-content', id: 3 },
+  { mobileBase: 'mb-p6-content', desktopBase: 'dt-p6-content', id: 4 },
+  { mobileBase: 'mb-p6-content', desktopBase: 'dt-p6-content', id: 5 },
+  { mobileBase: 'mb-p6-content', desktopBase: 'dt-p6-content', id: 6 },
+  { mobileBase: 'default', desktopBase: 'dt-p6-content', id: 7 }
+] %}
+
+{% set otherLeft = {
+  title: "Qwalker",
+  sub: "A simple, fun app that helps policyholders stay active and loyal. Users can track steps daily and complete challenges to get rewards.",
+  imgs: "/static/images/p05-banner.jpg",
+  url: "product-5.html",
+  list: ["APP","UI Design","Visual Design"]
+} %}
+
+{% set otherRight = {
+  title: "Perfectcorp.com & DemoStore",
+  sub: "Designed hyperlink styles and made Figma/ProtoPie components to make teamwork easier and keep designs the same.",
+  imgs: "/static/images/p01-banner.jpg",
+  url: "product-1.html",
+  list: ["Web RWD Design","UI Design","AI Painting","Component","Visual Design"]
+} %}
