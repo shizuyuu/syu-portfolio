@@ -125,11 +125,15 @@ section {
 .bg-wrapper {
     display: flex;
     overflow: hidden;
+    width: 100%;
+    will-change: transform;
+    transform: translateZ(0);
 
     .bg-img {
         flex-basis: 1780px;
         flex-shrink: 0;
         animation: move-rtl 30000ms linear infinite;
+        will-change: transform;
 
         @media screen and (min-width: 768px) {
             flex-basis: 2380px;

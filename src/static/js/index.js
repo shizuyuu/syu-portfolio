@@ -13,7 +13,7 @@ function handleStaggeredScroll() {
     window.innerHeight || document.documentElement.clientHeight;
 
   // 只在 section 進入視窗時觸發
-  if (rect.top < windowHeight && rect.bottom > 0 && window.innerWidth >= 768) {
+  if (rect.top < windowHeight && rect.bottom > 0 && window.innerWidth >= 1024) {
     // 計算進入區塊的滾動百分比
     const scrollY = window.scrollY || window.pageYOffset;
     const sectionTop = worksSection.offsetTop;
