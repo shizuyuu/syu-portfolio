@@ -3,6 +3,11 @@ import tailwindcss from "@tailwindcss/vite";
 // @ts-ignore
 import nunjucks from "vite-plugin-nunjucks";
 
+// 自動判斷 base（優先使用 BASE_URL env）
+const repo = process.env.GITHUB_REPOSITORY?.split("/")?.[1];
+const isGH = Boolean(repo || process.env.GH_PAGES || process.env.GITHUB_ACTIONS);
+const baseUrl = process.env.BASE_URL ?? (isGH && repo ? `/${repo}/` : "/");
+
 export default {
   root: "src/",
   publicDir: "../static/",
@@ -44,6 +49,7 @@ export default {
     tailwindcss(),
     nunjucks({
       variables: {
+        "*": { build_base: baseUrl },
         "index.html": {
           title: "Alani Syu Portfolio",
           description:

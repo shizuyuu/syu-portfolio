@@ -5,20 +5,23 @@
     {% set lang = 'zh-TW' %}
 {% endif %}
 
+{# build_base 由 build 時注入，預設為 '/' #}
+{% set build_base = build_base | default('/') %}
+
 {% if lang == 'en' %}
-    {% set basePath = '/en/' %}
+    {% set basePath = build_base ~ 'en/' %}
     {% set og_locale = 'en_US' %}
     {% set is_en = true %}
     {% set html_lang_attr = 'en' %}
 {% else %}
-    {% set basePath = '/' %}
+    {% set basePath = build_base %}
     {% set og_locale = 'zh_TW' %}
     {% set is_en = false %}
     {% set html_lang_attr = 'zh-TW' %}
 {% endif %}
 
 {% set pageUrl = url | default('index.html') %}
-{% set other_lang_href = (('/en/' ~ pageUrl) if not is_en else ('/' ~ pageUrl)) %}
+{% set other_lang_href = ((build_base ~ 'en/' ~ pageUrl) if not is_en else (build_base ~ pageUrl)) %}
 
 <html lang="{{ html_lang_attr }}">
 
@@ -36,8 +39,8 @@
     <meta property="og:image" content="{{image}}" />
 
     {# hreflang / canonical #}
-    <link rel="alternate" hreflang="en" href="{{ '/en/' ~ (url | default('index.html')) }}" />
-    <link rel="alternate" hreflang="zh-TW" href="{{ '/' ~ (url | default('index.html')) }}" />
+    <link rel="alternate" hreflang="en" href="{{ build_base ~ 'en/' ~ (url | default('index.html')) }}" />
+    <link rel="alternate" hreflang="zh-TW" href="{{ build_base ~ (url | default('index.html')) }}" />
     <link rel="canonical" href="{{ basePath ~ (url | default('index.html')) }}" />
 
     <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png" sizes="96x96" />
@@ -59,7 +62,7 @@
 
         {% block footer %}{% include "src/templates/global/footer.html" %}{% endblock %}
     </div>
-    <script type="module" src="/static/js/main.js"></script>
+    <script type="module" src="/static/js/index.js"></script>
     {% block page_js %}{% endblock %}
 </body>
 
