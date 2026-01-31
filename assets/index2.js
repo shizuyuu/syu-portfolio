@@ -498,4 +498,3 @@ function loadAOS() {
     offset: 100
   });
 }
-//# sourceMappingURL=index2.js.map
